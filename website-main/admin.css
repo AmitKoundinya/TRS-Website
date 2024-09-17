@@ -1,0 +1,153 @@
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #F9F9FB; /* Subtle background color */
+}
+
+/* Container for the background image and content */
+.background-container {
+    min-height: 100vh; /* Ensure the container takes up the full viewport height */
+    width: 100%; /* Ensure it covers the full width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/adminbg.jpg');
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+}
+
+
+/* Styling for the admin container */
+.admin-container {
+    width: 500px; /* Increased width */
+    margin: 20px auto; 
+    padding: 40px 30px; /* More padding for a spacious look */
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent background */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for a modern look */
+    backdrop-filter: blur(8px); /* Add a slight blur effect */
+}
+
+/* Styling for the admin form */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align inputs */
+}
+
+/* Styling for form inputs */
+.admin-form input {
+    width: 100%;
+    margin-bottom: 15px; /* Increased spacing between inputs */
+    padding: 15px; /* Bigger padding for a larger input field */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounder corners */
+    font-size: 16px; /* Increased font size */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Input hover and focus effects */
+.admin-form input:hover, .admin-form input:focus {
+    border-color: #7CBACD; /* Highlighted border on focus */
+    box-shadow: inset 0 0 8px rgba(124, 186, 205, 0.3); /* Stronger shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for form buttons */
+.admin-form button {
+    width: 100%;
+    padding: 15px; /* Larger button */
+    background-color: #7CBACD;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Shadow for a raised effect */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for button */
+}
+
+/* Button hover effect */
+.admin-form button:hover {
+    background-color: #6aa9bc;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Button active effect (when clicked) */
+.admin-form button:active {
+    background-color: #639dac;
+    transform: translateY(0); /* Remove lift on click */
+}
+
+/* Initially hide the event management section */
+.event-management {
+    display: none;
+}
+
+/* Navbar styles */
+.headernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Ensure links stay within the viewport */
+.headernav .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headernav .nav-links li {
+    margin-left: 15px;
+}
+
+.headernav .nav-links a {
+    color: #C6F0F2;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.headernav .nav-links a:hover {
+    background-color: #C6F0F2;
+    color: #000000;
+    border-radius: 5px;
+}
+
+/* Adjust navbar padding and font-size on smaller screens */
+@media (max-width: 768px) {
+    .headernav {
+        padding: 10px 20px;
+    }
+
+    .headernav .heading h4 {
+        font-size: 20px;
+    }
+
+    .headernav .nav-links li {
+        margin-left: 10px;
+    }
+
+    .headernav .nav-links a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}
